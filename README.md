@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Meeting Assistant
 
-## Getting Started
+AI Meeting Assistant is a web application that converts meeting audio into structured insights using AI.
 
-First, run the development server:
+It allows users to upload meeting recordings and automatically generates:
 
-```bash
+* Meeting summaries
+* Key discussion points
+* Action items
+* Organized notes
+
+The goal is to make meetings more productive and eliminate manual note-taking.
+
+---
+
+## Features
+
+* Upload meeting audio files
+* Automatic transcription processing
+* AI-generated meeting summaries
+* Key points extraction
+* Action items detection
+* Clean dashboard interface
+
+---
+
+## Tech Stack
+
+Frontend:
+
+* Next.js
+* Tailwind CSS
+* shadcn/ui
+
+Backend:
+
+* FastAPI
+* Python
+
+AI:
+
+* Groq API
+* LLM-based summarization
+
+Deployment:
+
+* Vercel (Frontend)
+* Render (Backend)
+
+---
+
+## Project Structure
+
+ai-meeting-assistant/
+
+frontend/
+
+* Next.js frontend
+* UI components
+* dashboard interface
+
+backend/
+
+* FastAPI server
+* AI processing logic
+* API endpoints
+
+---
+
+## Installation
+
+### 1. Clone Repository
+
+git clone https://github.com/dishaaa5/ai-meeting-assistant.git
+
+cd ai-meeting-assistant
+
+---
+
+### 2. Backend Setup
+
+cd backend
+
+Create virtual environment
+
+python -m venv venv
+
+Activate environment
+
+Windows:
+venv\Scripts\activate
+
+Install dependencies
+
+pip install -r requirements.txt
+
+Run backend
+
+uvicorn main:app --reload
+
+---
+
+### 3. Frontend Setup
+
+cd frontend
+
+Install dependencies
+
+npm install
+
+Run frontend
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Open the frontend application
+2. Upload a meeting audio file
+3. The backend processes the file
+4. AI generates a meeting summary
+5. Results are displayed on the dashboard
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Future Improvements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Real-time meeting transcription
+* Speaker identification
+* Meeting search
+* Team collaboration
+* Calendar integration
+* Subscription plans
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open source and available under the MIT License.
