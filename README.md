@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clarity AI – AI Meeting Assistant
 
-## Getting Started
+Clarity AI is an intelligent meeting assistant that converts meeting audio into structured insights including transcripts, summaries, key points, and action items.
 
-First, run the development server:
+It helps users quickly understand long meetings without manually listening to recordings.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Features
+
+• Upload meeting audio files
+• Automatic speech transcription
+• AI-powered meeting summaries
+• Key discussion points extraction
+• Action items generation
+• Simple API testing via Swagger UI
+
+---
+
+## Tech Stack
+
+Frontend
+• Next.js
+• React
+• Tailwind CSS
+
+Backend
+• FastAPI
+• Python
+
+AI
+• Groq API
+
+Deployment
+• Vercel (Frontend)
+• Cloud backend deployment
+
+---
+
+## Screenshots
+
+### 1. Clarity AI Web Interface
+
+![Dashboard Screenshot](assets/clarity_response(1).png)
+
+---
+
+### 2.Audio Upload & Results Page
+
+![Upload Screenshot](assets/clarity_response(2).png)
+
+
+---
+
+### 3. FastAPI API Response
+
+![API Screenshot](assets/fastapi_response.png)
+.png)
+
+---
+
+## How It Works
+
+1. User uploads a meeting audio file
+2. Backend processes the audio
+3. AI generates transcript and insights
+4. Results are returned as structured meeting notes
+
+---
+
+## Example API Output
+
+```
+{
+ "transcript": "The meeting discussed food preferences...",
+ "analysis": {
+   "summary": "Discussion about various food items",
+   "key_points": [
+     "Old beer smell improves with heat",
+     "Salt pickles pair with ham",
+     "Tacos al pastor are popular"
+   ],
+   "action_items": [
+     "Try pairing salt pickles with ham",
+     "Explore different taco varieties"
+   ]
+ }
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Clone the repository
 
-## Learn More
+```
+git clone https://github.com/yourusername/clarity-ai-meeting-assistant.git
+```
 
-To learn more about Next.js, take a look at the following resources:
+Backend setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Frontend setup
 
-## Deploy on Vercel
+```
+cd frontend
+npm install
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Future Improvements
+
+• Real-time meeting transcription
+• Speaker identification
+• Meeting history dashboard
+• Team collaboration features
+• Export notes to PDF / Notion
+
+---
+
+## Author
+
+Disha
+
+---
+
+## License
+
+This project is open-source and available under the MIT License.
